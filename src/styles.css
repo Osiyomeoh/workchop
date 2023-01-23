@@ -1,0 +1,108 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.background_img {
+  background: url(/images/fallingCash.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.background_ltBlue {
+  background-color: #b0d2ff;
+}
+.page_container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 32px;
+}
+
+.right {
+  text-align: right;
+  padding: 80px 80px 0px 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+.mar_30 {
+  margin: 30px;
+}
+
+.full-bg-size {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* .bg-dim {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+} */
+
+/* .bg-view {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+} */
+
+.text-center {
+  text-align: center;
+}
+
+.color-lightblue {
+  color: #a6ebfa;
+}
+
+.float-right {
+  float: right;
+}
+
+.font-48 {
+  font-size: 48px;
+}
+
+.font-32 {
+  font-size: 32px;
+}
+
+.bgColor-purple {
+  background-color: #1b0a37;
+}
+
+.bgColor-ltblue {
+  background-color: #b0d2ff;
+}
+
+.flex-endRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex {
+  display: flex;
+}
+.pad-20lr {
+  padding: 0px 20px;
+}
+
+.right {
+  justify-items: right;
+}
