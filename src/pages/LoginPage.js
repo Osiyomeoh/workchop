@@ -1,5 +1,5 @@
 import React from "react";
-import fallingCash from "../images/fallingCash.jpg";
+import work from "../images/work.jpeg";
 import LoginForm from "../forms/LoginForm";
 import AddUser from "../components1/shared/AddUser";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ const LoginPage = () => {
     <div
       // fix background image
       className="pageContainer full-bg-size bg-view "
-      style={{ backgroundImage: `url(${fallingCash})` }}
+      style={{ backgroundImage: `url(${work})` }}
     >
       <div className="flex-endRight mar_30">
         <button className=" ">
