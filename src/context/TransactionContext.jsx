@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
-import { ethers } from "ethers";
-import workchop from '../src/abis/workchop.json';
+import workchop from '../abis/workchop.json';
 import "reactstrap/lib/";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -18,6 +17,7 @@ export const TransactionProvider = ({ children }) => {
     signedIn: false,
     loaded: false,
   });
+  const [currentAccount, setCurrentAccount] = useState("");
 
   const initWeb3 = async () => {
     if (window.ethereum) {
@@ -37,12 +37,27 @@ export const TransactionProvider = ({ children }) => {
           accountId,
           loaded: true,
         });
+        window.location.reload();
         console.log('setup complete');
       } catch (e) {
         alert(e);
       }
     } else {
       alert('web3 not detected');
+    }
+  };
+  const connectWallet = async () => {
+    try {
+      if (!ethereum) return alert("Please install MetaMask.");
+
+      const accounts = await ethereum.request({ method: "eth_requestAccounts", });
+
+      setCurrentAccount(accounts[0]);
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+
+      throw new Error("No ethereum object");
     }
   };
 
@@ -151,15 +166,16 @@ export const TransactionProvider = ({ children }) => {
       console.error(e);
     }
   };
-  useEffect(() => {
-    initWeb3();
-  });
+  // useEffect(() => {
+  //   initWeb3();
+  // });
 
   
     return (
      <TransactionContext.Provider
         value={{
-         
+          connectWallet,
+          currentAccount,
           login,
           signUp,
           requestCompany,
@@ -180,4 +196,3 @@ export const TransactionProvider = ({ children }) => {
     );
   };
 
-export default App;

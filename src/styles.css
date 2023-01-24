@@ -106,3 +106,8 @@ button {
 .right {
   justify-items: right;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
