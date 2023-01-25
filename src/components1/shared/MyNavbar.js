@@ -67,12 +67,12 @@ const NavBar = () => {
                 </li>
             
                 <li class="nav-item">
-                    <a class="nav-link btn btn-primary text-white" type="button" tag={RRNavLink} to="/signup" data-toggle="modal" data-target="#myModal"><NavLink tag={RRNavLink} to="/login">
+                    <a class="nav-link btn btn-primary text-white" type="button" tag={RRNavLink} to="/Login" data-toggle="modal" data-target="#myModal"><NavLink tag={RRNavLink} to="/Login">
             Log In
           </NavLink></a>                  
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-danger text-white" type="button" tag={RRNavLink} to="/login" data-toggle="modal" data-target="#myModal"><NavLink tag={RRNavLink} to="/signup">
+                    <a class="nav-link btn btn-danger text-white" type="button" tag={RRNavLink} to="/signup" data-toggle="modal" data-target="#myModal"><NavLink tag={RRNavLink} to="/signup1">
             Sign Up
           </NavLink></a>
                 </li>

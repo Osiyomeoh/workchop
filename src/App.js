@@ -7,10 +7,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { Nav } from "react-bootstrap";
 import "./styles.css";
 import LandingPage from "./pages/LandingPage";
+import SignUp1 from "./pages/SignUp1";
+import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
 import ExpensesPage from "./pages/ExpensesPage";
-import SignUpPage from "./pages/SignUpPage";
 import RecordsPage from "./pages/RecordsPage";
 
 import {
@@ -33,11 +34,14 @@ const App = () => {
        <MyNavbar />
          <Switch>
          <Route path="/" exact component={LandingPage} />
-         <TransactionProvider><Route path="/Login" exact component={LoginPage} /></TransactionProvider>  
+         <TransactionProvider><Route path="/Login" exact component={LoginPage} />
+         <Route path="/signup1" component={SignUp1} />
+          <Route path="/signup" component={SignUpPage} />
            <Route  path="/main" component={MainPage} />
-           <Route path="/expenses"  component={ExpensesPage} /> 
-           <Route path="/signup" component={SignUpPage} />
+           <Route path="/expenses" component={ExpensesPage} /> 
+          
            <Route path="/records" component={RecordsPage} />
+           </TransactionProvider>  
          </Switch>
          <Footer/>
        </BrowserRouter>
