@@ -8,6 +8,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import LandingPage from "./pages/LandingPage";
 import SignUp1 from "./pages/SignUp1";
+import Company1 from "./pages/Company1";
+import Company2 from "./pages/Company2";
+import User1 from "./pages/User1";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
@@ -36,6 +39,9 @@ const App = () => {
          <Route path="/" exact component={LandingPage} />
          <TransactionProvider><Route path="/Login" exact component={LoginPage} />
          <Route path="/signup1" component={SignUp1} />
+         <Route path="/company1" component={Company1} />
+         <Route path="/company2" component={Company2} />
+         <Route path="/user1" component={User1} />
           <Route path="/signup" component={SignUpPage} />
            <Route  path="/main" component={MainPage} />
            <Route path="/expenses" component={ExpensesPage} /> 

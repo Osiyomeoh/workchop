@@ -33,15 +33,15 @@ const SignUp1 = () => {
   <div class="card-body justify-content-center">
  
    
-    <button href="#" type="button"  class="btn btn-warning text-white"><NavLink tag={RRNavLink} to="/signup">Company</NavLink></button>
+    <button href="#" type="button"  class="btn btn-warning text-white"><NavLink tag={RRNavLink} to="/company1">Company</NavLink></button>
   </div>
 </div>
 <div class="card " style={{width: "18rem"}}>
   <img class="card-img-top" src="https://drive.google.com/uc?export=view&id=1nNstGc5iXR_pcUjBa0CWc-yxCWB3JPbD" width="500" height="300" alt="Card image cap"/>
   <div class="card-body justify-content-center">
-    
+
    
-    <button href="#" type="button"  class="btn btn-warning text-white"><NavLink tag={RRNavLink} to="/signup">Developer</NavLink></button>
+    <button href="#" type="button"  class="btn btn-warning text-white"><NavLink tag={RRNavLink} to="/user1">Developer</NavLink></button>
   </div>
 </div>
     </div>

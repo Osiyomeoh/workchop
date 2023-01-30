@@ -106,6 +106,80 @@ button {
 .right {
   justify-items: right;
 }
+.cascading-right {
+  margin-right: -50px;
+}
+
+@media (max-width: 991.98px) {
+  .cascading-right {
+    margin-right: 0;
+  }
+}
+.bouton-image:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-top;
+  background-color: transparent;
+  background-position : center center;
+  background-repeat:no-repeat;
+}
+.top-left {
+  top: 12%;
+  left: 0;
+}
+
+.top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top-right {
+  top: 12%;
+  right: 0;
+}
+
+.mid-left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.mid-center {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.mid-right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.monBouton:before{
+   background-image : url(https://drive.google.com/uc?export=view&id=1nAS9ShKsY1sIdbv_x5Sxc_5tavUFLdEQ);
+  
+}
 
 @tailwind base;
 @tailwind components;
