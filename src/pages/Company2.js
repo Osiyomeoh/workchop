@@ -25,13 +25,11 @@ const Company2 = () => {
     
    {/* <!-- Pills navs --> */}
    <div>
-   <div class="position-absolute top-left"> <a class="btn btn-warning" href="#" role="button"><NavLink tag={RRNavLink} to="/signup1">
-            PREV
+   <div class="position-absolute top-left"> <a class="btn btn-warning" href="#" role="button"><NavLink tag={RRNavLink} to="/company1">
+            Back
           </NavLink></a></div>
   
-   <div class="position-absolute top-right"><a class="btn btn-warning" href="#" role="button"><NavLink tag={RRNavLink} to="/signup1">
-            NEXT
-          </NavLink></a></div>
+   
    
    </div>
     
@@ -39,7 +37,7 @@ const Company2 = () => {
    <br/>  <br/>
    <br/>
    <br/>
-   <div class="">
+   <div class="mx-auto" style={{width: `700px`}}>
    
    <form>
   {/* <!-- Name input --> */}
@@ -59,21 +57,19 @@ const Company2 = () => {
 
   {/* <!-- Message input --> */}
   <div class="form-outline mb-4">
-  <label class="form-label" for="form4Example3">Message</label>
-    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+  <label class="form-label" for="form4Example3">Enter your Company's first two managers</label>
+    <textarea class="form-control" id="form4Example3" placeholder="Manager 1" rows="1"></textarea>
+    
+    <textarea class="form-control" id="form4Example3" placeholder="Manager 2"  rows="1"></textarea>
     
   </div>
 
-  {/* <!-- Checkbox --> */}
-  <div class="form-check d-flex justify-content-center mb-4">
-    <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-    <label class="form-check-label" for="form4Example4">
-      Send me a copy of this message
-    </label>
-  </div>
+  
 
   {/* <!-- Submit button --> */}
-  <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+  <button type="submit" class="btn btn-warning btn-block"><NavLink tag={RRNavLink} to="/company3">
+            Finish
+          </NavLink></button>
 </form>
   {/* <!-- Jumbotron --> */}
 </div>

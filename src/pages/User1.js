@@ -4,6 +4,16 @@ import { Link } from "react-router-dom";
 // import SignUpForm from "../forms/SignUpForm";
 // import AddUser from "../components1/shared/AddUser";
 import work from "../images/wrk.jpeg";
+import { NavLink as RRNavLink } from "react-router-dom";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from "reactstrap";
 
 const User1 = () => {
 
@@ -12,65 +22,86 @@ const User1 = () => {
   return (
     <div className="pageContainer">
     {/* <h1>Main Page</h1> */}
-    <div
-      className="pageContainer full-bg-size bg-view "
-      style={{ backgroundImage: 'url(${work})' }}
-    >
+    
    {/* <!-- Pills navs --> */}
+   <div>
+   <div class="position-absolute top-left"> <a class="btn btn-warning" href="#" role="button"><NavLink tag={RRNavLink} to="/signup1">
+            PREV
+          </NavLink></a></div>
+  
+   <div class="position-absolute top-right"><a class="btn btn-warning" href="#" role="button"><NavLink tag={RRNavLink} to="/user2">
+            NEXT
+          </NavLink></a></div>
+   
+   </div>
+    
+   <br/>
+   <br/>  <br/>
+   <br/>
+   <br/>
    <div class="d-flex justify-content-center " >
-    <form>
-      <div class="text-center mb-3">
-        <p>Sign up with:</p>
-        { (<button type="button" onClick={connectWallet} class="btn btn-primary btn-lg"> Connect Wallet</button>)}
-            </div>
+   <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style={{
+            background: "hsla(0, 0%, 100%, 0.55);",
+            // backdrop-filter: "blur(30px);"
+         }} >
+          <div class="card-body p-5 shadow-5 text-center">
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <form>
+              {/* <!-- 2 column grid layout with text inputs for the first and last names --> */}
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">First name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Last name</label>
+                  </div>
+                </div>
+              </div>
 
-      <p class="text-center">or:</p>
+              {/* <!-- Email input --> */}
+              <div class="form-outline mb-4">
+                <input type="email" id="form3Example3" class="form-control" />
+                <label class="form-label" for="form3Example3">Email address</label>
+              </div>
 
-      {/* <!-- Name input --> */}
-      <div class="form-outline mb-4">
-        <input type="text" id="registerName" class="form-control" />
-        <label class="form-label" for="registerName">Name</label>
+              {/* <!-- Password input --> */}
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" class="form-control" />
+                <label class="form-label" for="form3Example4">Password</label>
+              </div>
+ 
+
+              {/* <!-- Submit button --> */}
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
+
+              {/* <!-- Register buttons --> */}
+              <div class="text-center">
+                <p>or sign up with:</p>
+                <button type="button" onClick={connectWallet} class="btn btn-warning bouton-image monBouton">Metamask</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
 
-      {/* <!-- Username input --> */}
-      <div class="form-outline mb-4">
-        <input type="text" id="registerUsername" class="form-control" />
-        <label class="form-label" for="registerUsername">Username</label>
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+          alt="" />
       </div>
-
-      {/* <!-- Email input --> */}
-      <div class="form-outline mb-4">
-        <input type="email" id="registerEmail" class="form-control" />
-        <label class="form-label" for="registerEmail">Email</label>
-      </div>
-
-      {/* <!-- Password input --> */}
-      <div class="form-outline mb-4">
-        <input type="password" id="registerPassword" class="form-control" />
-        <label class="form-label" for="registerPassword">Password</label>
-      </div>
-
-      {/* <!-- Repeat Password input --> */}
-      <div class="form-outline mb-4">
-        <input type="password" id="registerRepeatPassword" class="form-control" />
-        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-      </div>
-
-      {/* <!-- Checkbox --> */}
-      <div class="form-check d-flex justify-content-center mb-4">
-        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-          aria-describedby="registerCheckHelpText" />
-        <label class="form-check-label" for="registerCheck">
-          I have read and agree to the terms
-        </label>
-      </div>
-
-      {/* <!-- Submit button --> */}
-      <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
-    </form>
+    </div>
   </div>
+  {/* <!-- Jumbotron --> */}
 </div>
-{/* <!-- Pills content --> */}
     </div>
   
   );
